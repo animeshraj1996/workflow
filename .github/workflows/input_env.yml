@@ -18,4 +18,4 @@ jobs:
       - name: Print password environment variable
         run: echo "The password is ${{env.PASSWORD}}"
       - name: Print Age environment variable
-        run: echo "The password is ${{env.AGE}}"
+        run: echo "The age is ${{env.AGE}}"
