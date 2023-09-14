@@ -6,7 +6,7 @@ on:
         description: "User Age"
         required: true
 jobs:
-  test:
+  job1:
     runs-on: ubuntu-latest
     env:
       USER_NAME: Animesh
@@ -19,3 +19,16 @@ jobs:
         run: echo "The password is ${{env.PASSWORD}}"
       - name: Print Age environment variable
         run: echo "The age is ${{env.AGE}}"
+  job2:
+    runs-on: ubuntu-latest
+    env:
+      USER_NAME: Animesh
+      PASSWORD: prabhu@#$%
+      AGE: ${{ inputs.userAge }}
+    steps:
+      - name: Print user_name environment variable
+        run: echo "The user name in job2 is ${{env.USER_NAME}}"
+      - name: Print password environment variable
+        run: echo "The password in job2 is ${{env.PASSWORD}}"
+      - name: Print Age environment variable
+        run: echo "The age in job2 is ${{env.AGE}}"
